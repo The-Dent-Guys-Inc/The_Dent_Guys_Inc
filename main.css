@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: blue;
+    padding: 1rem;
+}
+
+section {
+    background-color: black;
+    color: white;
+}
+
+.big {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+#logo {
+    color: red;
+    margin: 0;
+}
