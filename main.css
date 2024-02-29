@@ -4,26 +4,58 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: white;
     padding: 1rem;
 }
 
-section {
-    background-color: black;
-    color: white;
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
-
-.big {
-    font-size: 1.5rem;
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 6rem;
+    }
 }
-
-h1 {
-    font-size: 4rem;
-    font-weight: bolder;
-    margin-top: 0;
-}
-
 #logo {
-    color: red;
-    margin: 0;
+        margin: 0;
+        box-align: left;
+}
+
+.header-right {
+    text-align: right;
+    padding-right: 5rem;
+
+}
+header li {
+    display: inline-block;
+    padding: 10 px;
+
+}
+.home-photo {
+    background-color: #003366 ;
+    padding: 2rem;
+    color: white;
+    padding-left: 300px;
+}
+
+.align {
+    text-align: center;
+}
+
+.reviews {
+    background-color: lightgray;
+    text-align: center;
+}
+.reviews li {
+    display: inline-block;
+}
+
+footer li {
+    padding-left: 5rem;
+}
+.footer-right {
+    text-align: right;
+    padding-right: 5rem;
 }
