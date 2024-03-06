@@ -95,8 +95,8 @@ header li {
     text-align: center; 
 }
 .reviews li {
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     color: black; 
     padding-top: 1rem;
     padding-bottom: 1rem;
