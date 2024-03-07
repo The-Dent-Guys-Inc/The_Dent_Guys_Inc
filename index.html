@@ -10,14 +10,16 @@
     <body>
         <header>
             <div class="header-left">
-                <img id="logo" src="images/Dent-Guys-Logo.png" alt="The Dent Guys Logo"/>
+                <a href="index.html">
+                    <img id="logo" src="images/Dent-Guys-Logo.png" alt="The Dent Guys Logo"/>
+                </a>
             </div>
             <div class="header-right">
                 <p>410-808-3892</p>
                 <ul>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Photos</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href=""class="freeestimate">Free Estimate</a></li>
                 </ul>
             </div>
@@ -32,7 +34,7 @@
                 <img src="images/dent guys truck edit.jpg" alt="The Dent Guys Truck"/>
             </div>
         </section>
-        <section class="align">
+        <section class="align-container">
             <div class="align-text">
                 <h3>Don't go to the body shop!</h3><p>"Paintless Dent Repair" is the sensible alternative to body and paint repair.<br>We can assist with door dings, shopping cart bumps, hail damage, highway debris, fallen limbs. Process can be less expensive, less time, and retain factory finish.
             </div>
@@ -74,9 +76,9 @@
         <footer id="footer">
             <div class="footer-left">
             <ul>
-                <li><a href="">Services</a></li>
-                <li><a href="">Photos</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             </div>
             <div class="footer-right">
@@ -86,7 +88,51 @@
 
         <script src="splide-4.1.3/dist/js/splide.min.js"></script>
         <script>
-            new Splide( '.splide' ).mount();
+            new Splide( '.splide',{
+                type    : 'loop',
+                autoplay: 'true',
+                perPage : 1,
+                interval: 4000,
+                
+                width: '75%',
+            } ).mount();
         </script>
+
+        
+
+        <script src="splide-4.1.3/splide-extension-intersection-master/dist/js/splide-extension-intersection.min.js"></script>
+        <script>
+            new Splide( '#splide' ).mount( window.splide.Extensions );
+        </script>
+        <script>
+            new Splide( '#splide', {
+            autoplay: 'pause',
+            intersection: {
+              inView: {
+                autoplay: true,
+              },
+            },
+          } );
+        </script>
+        <script>
+            new Splide( '#splide', {
+            autoplay: 'pause',
+            intersection: {
+              inView: {
+                autoplay: true,
+              },
+              outView: {
+                autoplay: false,
+              },
+            },
+          } );
+        </script>
+
+        <!-- auto scroll
+            <script src="splide-4.1.3/splide-extension-auto-scroll-master/dist/js/splide-extension-auto-scroll.min.js"></script>
+        <script>
+            new Splide( '.splide' ).mount( window.splide.Extensions );
+        </script>-->
+
     </body>
 </html>
