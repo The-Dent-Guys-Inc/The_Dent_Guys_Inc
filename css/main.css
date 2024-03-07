@@ -36,7 +36,7 @@ header {
 
 .header-left {
     flex-basis: 20%;
-    background: red;
+    
     margin-left: 5rem;
 }
 
@@ -46,7 +46,7 @@ header {
     flex-direction: column;
     flex-wrap: nowrap;
     flex-basis: 80%;
-    background: yellow;
+    
     padding-right: 5rem;
     justify-content: flex-end;
 }
