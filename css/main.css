@@ -86,29 +86,20 @@ header li{
 
 
 #home-photo {
-    background-image: url('images/dent guys truck edit.jpg');
+    background-image: url('../images/dent-guys-truck-edit.jpg'); background-repeat: no-repeat;
     background-color: hsla(0,0,0,0.5);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    height: 913px;
 }
 
 .box {
-    /* height: 286px; */
-    width: 593px;
-    border: 2px solid black;
-    background-color: white;
+    color: white;
     text-align: center;
-    color: black;
-    padding: 50px;
-    position: relative;
-    z-index: 1;
-    margin-right: -40px;
-    margin-bottom: 120px
-    /* top: 70px;
-    left: 15%; */
+    padding-top: 200px;
+    padding-left: 800px;
+ 
 }
 
 .dentguystruck {
