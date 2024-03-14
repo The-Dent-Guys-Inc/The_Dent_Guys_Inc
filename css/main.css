@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: "Titillium Web", sans-serif;
     margin: 0;
 }
 *,
@@ -20,24 +20,49 @@ body {
     }
 }
 
+/*Fonts*/
+.titillium-web-light {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .titillium-web-semibold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
+/*header*/
 header {
-
-
-   
+  display: flex;
+  flex-direction: row;
 }
 
 #logo {
     display: flex;
     max-width: 100%; 
-    height: 257px;
-    margin-left: 5rem;
-    z-index: 1;
-    
+    max-height: 257px; 
+}
+
+.home .header-left {
+    margin-bottom: -700px;
 }
 
 .header-left {
-
+    padding-left: 8rem;
 }
 
 .header-right { 
@@ -48,8 +73,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    flex-basis: 80%;
-    padding-right: 5rem;
+    flex-basis: 70%;
     justify-content: flex-end;
 }
 
@@ -58,24 +82,30 @@ header ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    
 }
 header p {
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 20px;
+    margin-right: 2rem;
 }
 
 header ul {
-   color: black;
-    
+    list-style-type: none;
 }
 
-header li{
-    
+header li {
     padding: 0 40px;
+}
+
+header a {
+    color: black;
     font-weight: bold;
-    list-style-type: none;
     text-decoration: none;
-    
+    font-size: 24px;
+}
+header a:hover {
+    color:#0092FF;
 }
 
 .freeestimate {
@@ -83,13 +113,18 @@ header li{
     color: white;
     background-color: #0092FF;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 2px 10px;
+    font-weight: 400;
+
 }
-
-
+.freeestimate:hover {
+    color: black;
+}
+/*index*/
 #home-photo {
     background-image: url('../images/dent-guys-truck-edit.jpg'); background-repeat: no-repeat;
-    background-color: hsla(0,0,0,0.5);
+    background-color: rgb(128,128,128);
+    background-blend-mode: multiply;
     margin: 0;
     padding: 0;
     background-size: cover;
@@ -99,23 +134,11 @@ header li{
 .box {
     color: white;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 180px;
     padding-left: 800px;
- 
-}
-
-.dentguystruck {
-    /* height: 400px; */
-    width: 839px;
-    border: 2px solid black;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.dentguystruck img {
-    display: block;
-    width: 100%;
-
+ }
+.box p {
+    font-size: 2.5rem;
 }
 
 .findyourdentguy {
@@ -124,8 +147,32 @@ header li{
     background-color: #0092FF;
     border-radius: 5px;
     padding: 10px 15px;
+    font-size: 24px;
+    text-decoration: none;
+
+}
+.findyourdentguy:hover {
+    padding: 12px 17px;
+    font-size: 26px;
+}
+.align-text {
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+    margin-bottom: 140px;
+}
+.align-text h2 {
+    font-size: 30px;
+}
+.align-text p {
+    font-size: 25px;
+    line-height: 2.5rem;
 }
 
+
+/*index slides*/
 .splide__slide img {
     width: 100%;
     
@@ -143,27 +190,10 @@ header li{
     text-align: center;
     padding: 1rem;
 }
-.photos {
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-.photos img {
-    width: 40%;
-    padding: 40px;
-}
 
 
-.align-text {
-    text-align: center;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 75px;
-    margin-bottom: 75px;
-}
 
+/*index reviews secton*/
 .reviews {
     background-color: lightgray;
     color:#003366;
@@ -178,33 +208,43 @@ header li{
 .reviews h2 {
     flex-basis: 100%;
     text-align: center;
+    font-size: 50px;
 }
-
+.reviews p {
+    font-size: 20px;
+}
 .reviews div {
     color: black; 
     flex-basis: calc(100% / 3);
-    padding: 1rem 5rem;
+    padding: 1rem 6rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 #customers {
     color:#003366;
     font-weight: bold;
 }
 
+/*footer*/
 #footer {
-    /*height: 300px;*/
     background-color: #003366;
-   
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
+footer ul {
+    list-style-type: none;
+}
 footer li {
     padding: 1rem;
-    color: white;
-    list-style-type: none;
+}
+footer a {
+    color: white;    
     text-decoration: none;
+    font-size: 20px;
+}
+footer a:hover {
+    color:#0092FF
 }
 .footer-left {
     flex-basis: 80%;
@@ -215,6 +255,7 @@ footer li {
     padding-right: 5rem; 
 }
 
+/*contact page*/
 .contact-container {
     display:flex;
 }
@@ -227,25 +268,51 @@ text-align: center;
     width: 50%;
 }
 .contact h3 {
-    margin-left: 6rem;
+    margin-left: 350px;
 }
 .contact p,
 .contact a {
-    margin-left: 7rem;
+    margin-left: 400px;
 }
 
 .find-your-dent-guy h4 {
-    margin-left: 6rem;
+    margin-left: 350px;
 }
 .find-your-dent-guy p {
-    margin-left: 7rem;
+    margin-left: 400px;
 }
 .find-your-dent-guy h2 {
     color: white;
-    /*border: 2px solid black;*/
     background-color: #0092FF;
     padding: 10px 15px;
     text-align: center;
-    /*margin-left: 40%;
-    margin-right: 40%;*/
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.find-your-dent-guy {
+    padding-bottom: 100px;
+}
+
+
+/*photos page*/
+.photos {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.photos img {
+    width: 40%;
+    padding: 40px;
+}
+
+/*services page*/
+.services {
+
+}
+.services info {
+
+}
+.services img {
+    border: 2px solid black;
 }
