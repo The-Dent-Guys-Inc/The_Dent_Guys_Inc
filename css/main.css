@@ -275,13 +275,13 @@ text-align: center;
     margin-left: 400px;
 }
 
-.find-your-dent-guy h4 {
+#find-your-dent-guy h3 {
     margin-left: 350px;
 }
-.find-your-dent-guy p {
+#find-your-dent-guy p {
     margin-left: 400px;
 }
-.find-your-dent-guy h2 {
+#find-your-dent-guy h2 {
     color: white;
     background-color: #0092FF;
     padding: 10px 15px;
@@ -289,7 +289,7 @@ text-align: center;
     margin-left: 150px;
     margin-right: 150px;
 }
-.find-your-dent-guy {
+#find-your-dent-guy {
     padding-bottom: 100px;
 }
 
@@ -308,11 +308,21 @@ text-align: center;
 
 /*services page*/
 .services {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+margin-bottom: 2rem;
 
 }
-.services info {
-
+.info {
+    margin-left: 6rem;
 }
-.services img {
+.info p {
+    margin-left: 3rem;
+}
+.info-photo img {
     border: 2px solid black;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 6rem;
 }
