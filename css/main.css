@@ -108,6 +108,17 @@ header a:hover {
     color:#0092FF;
 }
 
+.contact-button {
+    border: 2px solid black;
+    color: white;
+    background-color: #0092FF;
+    border-radius: 5px;
+    padding: 2px 15px;
+    font-weight: 400;
+}
+.contact-button:hover {
+    color: black;
+}
 /*.freeestimate {
     border: 2px solid black;
     color: white;
@@ -116,10 +127,8 @@ header a:hover {
     padding: 2px 10px;
     font-weight: 400;
 
-}
-.freeestimate:hover {
-    color: black;
 }*/
+
 /*index*/
 #home-photo {
     background-image: url('../images/dent-guys-truck-edit.jpg'); background-repeat: no-repeat;
@@ -278,7 +287,7 @@ text-align: center;
 
 #find-your-dent-guy h3 {
     margin-left: 350px;
-    font-size: 1.5rem;
+    
 }
 #find-your-dent-guy p {
     margin-left: 400px;
@@ -294,11 +303,32 @@ text-align: center;
 #find-your-dent-guy {
     padding-bottom: 100px;
 }
-.dent-guys h3 {
+.dent-guys-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 50px;
+    margin-top: -50px;
 }
+.shop {
+    margin-right: 150px;
+}
+.mobile {
+    margin-left: 150px;
+}
+.shop h3 {
+    font-size: 1.5rem;
+}
+.mobile h3 {
+    font-size: 1.5rem;
+}
+.mobile p {
+    padding-left: 50px;
+}
+.shop p {
+    padding-left: 50px;
+}
+
 
 /*photos page*/
 .photos {
