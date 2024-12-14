@@ -82,7 +82,7 @@ header ul {
 header p {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 2rem;
 }
 header ul {
@@ -95,7 +95,7 @@ header a {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
 }
 header a:hover {
     color:#0092FF;
@@ -105,7 +105,7 @@ header a:hover {
     background-color: #0092FF;
     border-radius: 5px;
     padding: 10px 20px; 
-    font-size: 24px; 
+    font-size: 20px; 
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box; 
@@ -119,7 +119,42 @@ header a:hover {
     color: white;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4); 
 }
-
+/*Dropdown Menu*/
+.dropdown-menu {
+    display: none; /* Hide by default */
+    position: absolute; /* Position relative to the parent */
+    top: 100%; /* Align dropdown below the parent */
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px; /* Ensures dropdown has a width */
+    z-index: 1000; /* Ensures dropdown stays above other elements */
+    border: 1px solid #333;
+  }
+  
+  .dropdown-menu li {
+    border-bottom: 1px solid #555;
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none; /* Remove border for last item */
+  }
+  
+  .dropdown-menu a {
+    padding: 10px 15px;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #575757;
+  }
+  
+  /* Show Dropdown on Hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 /*index*/
 #home-photo {
@@ -129,28 +164,29 @@ header a:hover {
     margin: 0;
     padding: 0;
     background-size: cover;
-    height: 913px;
+    width: 100%; 
+    height: 90vh;
 }
-
+@media (max-width: 768px) {
+    #home-photo {
+      height: 30vh; /* Adjust height for smaller screens */
+    }
+  }
 .box {
     color: white;
     text-align: center;
     padding-top: 180px;
     padding-left: 800px;
 }
-.box .box-small {
-
-}
 .box-small h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 10px;
 }
 .box-small h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     margin-top:10px;
-    
 }
 
 
@@ -161,14 +197,14 @@ header a:hover {
     background-color: #0092FF;
     border-radius: 5px;
     padding: 10px 15px;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     transition: padding 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
 
 }
 .findyourdentguy:hover {
     padding: 12px 17px;
-    font-size: 26px;
+    font-size: 22px;
 }
 .align-text {
     text-align: center;
