@@ -9,7 +9,13 @@ body {
 }
 h3 {
     color:#0092FF;
-    font-size: 22px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 @media screen and (min-width: 600px) {
@@ -302,12 +308,13 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: flex-end;
 }
 footer ul {
     list-style-type: none;
 }
 footer li {
-    padding: 1rem;
+    padding: 16px;
 }
 footer a {
     color: white;    
@@ -324,6 +331,7 @@ footer a:hover {
 .footer-right {
     flex-basis: 20%;
     padding-right: 5rem; 
+    padding-bottom: 30px;
 }
 
 /* Pages General Layout */
@@ -335,7 +343,7 @@ footer a:hover {
     margin: 0;
 }
 .content {
-    margin: 50px 200px 100px 200px;
+    margin: 50px 300px 100px 300px;
 }
 
 
@@ -413,14 +421,14 @@ text-align: center;
 }
 .photos img {
     width: 50%;
-    padding: 50px;
+    padding: 20px;
 }
 
 
 /*services page*/
 .top-content {
     text-align: center;
-    margin: 50px 550px 0px 550px;
+    margin: 50px 600px 0px 600px;
 
 }
 .services-info-container1, .services-info-container2 {
@@ -437,7 +445,40 @@ text-align: center;
     margin-left: 100px;
 }
 .services-photo2 {
-    margin-right: 100px;
+    margin-right: 100px; 
+    width: 150%;  
+}
+.services-photo2 img {
+    width: 100%;
+}
+.services-how-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    padding: 50px 300px;
+    text-align: center;
+}
+.How-it-works-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 400px;
+    margin: 20px 10px 0 10px;
+}
+.steps-body-container {
+    background-color: white;
+    padding: 10px 20px;
+    color: black;
+}
+.steps-body-container p {
+    text-align: left;
 }
 
 /* FAQ */
@@ -463,9 +504,9 @@ hr {
 }
 .FAQ-photo img {
     border: 2px solid black;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-top: 150px;
-    width: 600px;
+    width: 500px;
 }
 
 
@@ -475,7 +516,6 @@ hr {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: flex-start;
-    /* justify-content: space-between; */
 }
 .discount-photo img {
     margin-left: 200px;
