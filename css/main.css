@@ -621,11 +621,8 @@ hr {
     width: 100%;
     margin-right: 100px;
 }
-.dent-repair-img {
-    /* width: 50%; */
-}
 .dent-repair-img img {
     width: 500px;
     padding-left: 100px;
-    /* width: 100%; */
+
 }
