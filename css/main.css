@@ -2,6 +2,9 @@ body {
     font-family: "Titillium Web", sans-serif;
     margin: 0;
 }
+#main {
+    margin-top: 120px;
+}
 *,
 *::before,
 *::after {
@@ -58,7 +61,15 @@ p {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
+    justify-content: space-between;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 120px;
 }
   
 #logo-index {
@@ -66,11 +77,9 @@ header {
     max-width: 100%;
     max-height: 257px;
 }
-  
 #logo {
     display: flex;
-    max-width: 60%;
-    max-height: 257px;
+    height: 100%;
 }
   
 .home .header-left {
@@ -173,7 +182,9 @@ header {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-  
+main {
+    margin-top: 120px;
+}
 
 /*index*/
 #home-photo {
@@ -314,6 +325,9 @@ header {
     flex-wrap: nowrap;
     align-items: flex-end;
 }
+#logo-footer {
+    width: 100%;
+}
 footer ul {
     list-style-type: none;
 }
@@ -442,9 +456,41 @@ text-align: center;
     margin-left: 200px;
     text-align: center;
 }
+.top-content-left h2 {
+    font-size: 2rem;
+
+    font-weight:  Bold;
+    margin-bottom: 10px;
+}
 .top-content img{
     height: 500px;
     margin-left: 100px;
+}
+.repair-services-container{
+    align-content: center;
+    text-align: center;
+    margin-bottom: 150px;
+}
+.repair-services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.repair-services img {
+    height: 100px;
+}
+.repair-services-button {
+    background-color: #003366;
+    padding: 5px 100px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.repair-services-button a {
+    text-decoration: none;
+    color: white;
+
 }
 .services-info-container1,
 .services-info-container2 {
@@ -520,7 +566,6 @@ hr {
     width: 100%; 
 }
 .FAQ-photo img {
-    border: 2px solid black;
     margin-left: 100px;
     margin-top: 150px;
     width: 500px;
@@ -533,6 +578,7 @@ hr {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: flex-start;
+    padding-bottom: 200px;
 }
 .discount-photo img {
     margin-left: 200px;
@@ -555,16 +601,31 @@ hr {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    text-align: center;
     align-items: center;
     background-color: lightgrey;
 }
-.top-content-dent-repair img{
+.top-content-dent-repair-img img{
     height: 500px;
+}
+.top-content-right h2 {
+    font-size: 2rem;
+    font-weight: 400 Bold;
+    margin-bottom: 10px;
+}
+.top-content-right img {
+    height: 200px;
+    margin-bottom: 10px; 
+}
+.top-content-right {
+    text-align: center;
+    width: 100%;
     margin-right: 100px;
 }
-
-.top-content-right {
-    margin-right: 200px;
-    text-align: center;
+.dent-repair-img {
+    /* width: 50%; */
+}
+.dent-repair-img img {
+    width: 500px;
+    padding-left: 100px;
+    /* width: 100%; */
 }
