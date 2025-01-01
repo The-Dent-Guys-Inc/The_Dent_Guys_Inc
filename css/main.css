@@ -12,12 +12,12 @@ body {
 }
 h3 {
     color:#0092FF;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 p {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.5;
 }
 
@@ -76,10 +76,12 @@ header {
     display: flex;
     max-width: 100%;
     max-height: 257px;
+    transition: height 0.5s ease, transform 0.5s ease;
 }
 #logo {
     display: flex;
     height: 100%;
+    transition: height 0.5s ease, transform 0.5s ease;
 }
   
 .home .header-left {
@@ -119,7 +121,7 @@ header {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   
   header a:hover {
@@ -185,6 +187,92 @@ header {
 main {
     margin-top: 120px;
 }
+/* Mobile Menu */
+.hamburger-menu {
+    display: none;  /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 10px 0;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation Menu (Initially hidden) */
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #003366;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.mobile-nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.mobile-nav ul li {
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* Responsive Header */
+@media screen and (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* Hide original nav on mobile */
+    header ul {
+        display: none;
+    }
+
+    /* Show mobile navigation */
+    .mobile-nav {
+        display: block;
+    }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 769px) {
+    /* Desktop Navigation */
+    .hamburger-menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    /* Adjust footer and layout for large screens */
+    .footer-left {
+        padding-left: 10rem;
+    }
+
+    .footer-right {
+        padding-right: 10rem;
+    }
+}
 
 /*index*/
 #home-photo {
@@ -227,7 +315,7 @@ main {
     background-color: #0092FF;
     border-radius: 5px;
     padding: 10px 15px;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
@@ -249,13 +337,13 @@ main {
     margin-bottom: 140px;
 }
 .align-text h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 .align-text h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 .align-text p {
-    font-size: 25px;
+    font-size: 1.5625rem;
     line-height: 2.5rem;
 }
 
@@ -276,46 +364,15 @@ main {
 .reviews {
     background-color: lightgray;
     color:#003366;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center; */
     padding-top: 10px;
     padding-bottom: 20px;
 }
 .reviews h2 {
     flex-basis: 100%;
     text-align: center;
-    font-size: 50px;
+    font-size: 3.125rem;
 }
-.reviews p {
-    font-size: 15px;
-}
-.reviews-box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: center;
-    margin-left: 80px;
-    margin-right: 80px;
-}
-.reviews-box div {
-    color: black; 
-    flex-basis: calc(100% / 3);
-    padding: 10px;
-    margin: 50px;
-    text-align: center;
-    line-height: 2rem;
-    background-color: white;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 
-}
-#customers {
-    color:#003366;
-    font-weight: bold;
-}
 
 /*footer*/
 #footer {
@@ -337,7 +394,7 @@ footer li {
 footer a {
     color: white;    
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 footer a:hover {
     color:#0092FF
