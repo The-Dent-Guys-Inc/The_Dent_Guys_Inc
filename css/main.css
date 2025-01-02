@@ -3,11 +3,13 @@ body {
     margin: 0;
 }
 html {
-    font-size: 16px;
+    font-size: 100%;
 }
 #main {
     margin-top: 120px;
 }
+
+
 *,
 *::before,
 *::after {
@@ -22,17 +24,6 @@ h3 {
 p {
     font-size: 1.125rem;
     line-height: 1.5;
-}
-
-@media screen and (min-width: 600px) {
-    h1 {
-        font-size: 3rem;
-    }
-}
-@media screen and (min-width: 900px) {
-    h1 {
-        font-size: 6rem;
-    }
 }
 
 /*Fonts*/
@@ -77,14 +68,16 @@ header {
   
 #logo-index {
     display: flex;
-    width: 100%;
-    max-height: clamp(120px, 10vw, 257px);
+    width: auto;
+    height: 250px;
+    max-height: 250px;
     transition: height 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #logo {
     display: flex;
     width: auto;
-    height: 100%;
+    height: 120px;
+    max-height: 120px;
     transition: height 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Media queries for responsiveness */
@@ -93,6 +86,8 @@ header {
     #logo-index {
         max-height: 200px; /* Slightly reduce height for medium screens */
     }
+
+  
 }
 
 /* For small screens */
@@ -100,15 +95,25 @@ header {
     #logo-index {
         max-height: 150px; /* Further reduce height for smaller screens */
     }
+    #logo {
+        max-height: 100px; /* Compact size for smaller screens */
+    }
+
 }
 
+/* Adjust for very small screens (mobile portrait) */
+@media (max-width: 480px) {
+    #logo {
+        max-height: 80px; /* Smaller size for very small screens */
+    }
+}
  
-.home .header-left {
+.header-left {
     margin-bottom: -700px;
 }
   
 .header-left {
-    padding-left: 8rem;
+    padding-left: 128px;
 }
   
 .header-right {
@@ -152,7 +157,7 @@ header {
     background-color: #0092FF;
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 1.25rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
@@ -160,14 +165,14 @@ header {
     position: relative;
   }
   
-  /* Hover effect */
+/* Hover effect */
   .contact-button:hover {
     transform: scale(1.1);
     color: white;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4);
   }
   
-  /* Dropdown Menu */
+/* Dropdown Menu */
   .dropdown-menu {
     display: none; 
     position: absolute; 
@@ -199,16 +204,14 @@ header {
     text-decoration: none;
   }
   
-  /* Show Dropdown on Hover */
-  .dropdown:hover .dropdown-menu {
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
     display: block;
-  }
-main {
-    margin-top: 120px;
 }
+
 /* Mobile Menu */
 .hamburger-menu {
-    display: none;  /* Hide by default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     width: 30px;
@@ -236,7 +239,9 @@ main {
     text-align: center;
     z-index: 1000;
 }
-
+.mobile-nav.active {
+    display: block;
+}
 .mobile-nav ul {
     padding: 0;
     list-style-type: none;
@@ -255,7 +260,7 @@ main {
 
 
 /* Responsive Header */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     /* Show hamburger menu on mobile */
     .hamburger-menu {
         display: flex;
@@ -268,7 +273,7 @@ main {
 
     /* Show mobile navigation */
     .mobile-nav {
-        display: block;
+        display: none;
     }
 }
 
@@ -293,9 +298,29 @@ main {
     }
 }
 
+
+/* Base font size */
+h1 {
+    font-size: 6rem;
+}
+
+/* Adjust for medium screens */
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Adjust for large screens */
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
 /*index*/
 #home-photo {
-    background-image: url('../images/dent-guys-truck-edit.jpg'); background-repeat: no-repeat;
+    background-image: url('../images/dent-guys-truck-edit.jpg');
+    background-repeat: no-repeat;
     background-color: rgb(128,128,128);
     background-blend-mode: multiply;
     margin: 0;
@@ -304,15 +329,13 @@ main {
     width: 100%; 
     height: 90vh;
 }
-@media (max-width: 768px) {
-    #home-photo {
-      height: 30vh;
-  } }
+
+
 .box {
     color: white;
     text-align: center;
-    padding-top: 180px;
-    padding-left: 800px;
+    padding-top: 10%;
+    padding-left: 50%;
 }
 .box-small h2 {
     font-size: 2rem;
@@ -325,7 +348,6 @@ main {
     font-weight: 400;
     margin-top:10px;
 }
-
 
 .findyourdentguy {
     color: white;
@@ -365,6 +387,12 @@ main {
     font-size: 1.5625rem;
     line-height: 2.5rem;
 }
+@media (max-width: 1024px) {
+    #home-photo {
+        height: 60vh; 
+    }
+
+}
 
 
 /*index- slides*/
@@ -377,7 +405,6 @@ main {
     margin-right: 12.5%;
     
 }
-
 
 /*index- reviews secton*/
 .reviews {
@@ -415,6 +442,7 @@ footer a {
     text-decoration: none;
     font-size: 1.25rem;
 }
+#main
 footer a:hover {
     color:#0092FF
 }
@@ -437,28 +465,7 @@ footer a:hover {
     margin: 0;
 }
 .content {
-    margin: 50px 300px 100px 300px;
-}
-
-/* Medium screen adjustment */
-@media (max-width: 1024px) {
-    .content {
-        margin: 50px 200px 100px 200px;
-    }
-}
-
-/* Small screen adjustment */
-@media (max-width: 768px) {
-    .content {
-        margin: 50px 100px 100px 100px;
-    }
-}
-
-/* Extra small screen adjustment (optional) */
-@media (max-width: 480px) {
-    .content {
-        margin: 20px; /* Simplified for very small screens */
-    }
+    margin: 2.5% 15% 5% 15%;
 }
 
 
@@ -469,19 +476,17 @@ footer a:hover {
 }
 .map{
 width: 50%;
-margin-right: 6rem;
 text-align: center;
 }
 .contact {
     width: 50%;
 }
 .contact h3 {
-    margin-left: 350px;
     font-size: 1.5rem;
 }
 .contact p,
 .contact a {
-    margin-left: 400px;
+    margin-left: 100px;
 }
 
 #find-your-dent-guy h3 {
@@ -556,12 +561,12 @@ text-align: center;
 }
 .top-content-left h2 {
     font-size: 2rem;
-
     font-weight:  Bold;
     margin-bottom: 10px;
 }
 .top-content img{
-    height: 500px;
+    width: 50%;
+    height: auto;
     margin-left: 100px;
 }
 .repair-services-container{
@@ -578,6 +583,7 @@ text-align: center;
 }
 .repair-services img {
     height: 100px;
+    width: auto;
 }
 .repair-services-button {
     background-color: #003366;
@@ -604,6 +610,11 @@ text-align: center;
 }
 .services-photo1 {
     margin-right: 100px;
+    width: 150%;
+    height: auto;
+}
+.services-photo1 img {
+    width: 100%;
 }
 .services-photo2 {
     margin-right: 100px; 
@@ -618,6 +629,7 @@ text-align: center;
     background-color: lightgrey;
     padding: 50px 300px;
     text-align: center;
+    width: 100%;
 }
 .How-it-works-container {
     display: flex;
@@ -625,12 +637,14 @@ text-align: center;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
 }
 .steps-container {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 20px 10px 0 10px;
 }
 .steps-body-container {
@@ -640,6 +654,30 @@ text-align: center;
 }
 .steps-body-container p {
     text-align: left;
+}
+
+
+
+/* For small screens, stack content vertically */
+@media (max-width: 768px) {
+    #main .top-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #main .top-content-left {
+        padding-right: 0;
+    }
+}
+
+/* For mobile, reduce padding and make sure sections stack */
+@media (max-width: 480px) {
+    #main section {
+        padding: 15px;
+    }
+    #main .top-content-left {
+        padding-right: 0;
+        text-align: center;
+    }
 }
 
 /* FAQ */
@@ -723,3 +761,71 @@ hr {
     padding-left: 100px;
 
 }
+
+/* Adjusting for medium screens */
+@media (max-width: 1420px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 95%; 
+    }
+    h2, .box-small h2 {
+        font-size: 1.8rem;
+    }
+    h3, .box-small h3 {
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    header a {
+        font-size: 1rem;
+    }
+    .contact-button, .findyourdentguy {
+        font-size: 1.125rem;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 90%; 
+    }
+    h2, .box-small h2 {
+        font-size: 1.4rem;
+    }
+    h3, .box-small h3 {
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    header a {
+        font-size: 1rem;
+    }
+    .contact-button, .findyourdentguy {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    html {
+        font-size: 85%; 
+    }
+    h2, .box-small h2 {
+        font-size: 1.4rem;
+    }
+    h3, .box-small h3 {
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    header a {
+        font-size: 1rem;
+    }
+    .contact-button, .findyourdentguy {
+        font-size: 1rem;
+    }
+}
+
