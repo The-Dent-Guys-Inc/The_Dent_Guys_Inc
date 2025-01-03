@@ -132,7 +132,7 @@ header {
   header a:hover {
     color: #0092FF;
   }
-  /* Media queries for responsiveness */
+/* Media queries for responsiveness */
 /* For medium screens */
 @media (max-width: 1024px) {
     #logo-index {
@@ -173,7 +173,7 @@ header {
   .contact-button {
     color: white;
     background-color: #0092FF;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px 20px;
     font-size: 1.25rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
@@ -348,7 +348,7 @@ header {
     font-weight: bold;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     background-color: #0092FF;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px 15px;
     font-size: 1.25rem;
     text-decoration: none;
@@ -518,11 +518,9 @@ footer a:hover {
 #find-your-dent-guy h3 {
     margin-left: 0; 
     text-align: center;
-    
 }
 #find-your-dent-guy p {
     text-align: center;
-    
     margin: 0 auto;
     max-width: 800px;
 }
@@ -531,10 +529,8 @@ footer a:hover {
     background-color: #0092FF;
     padding: 10px 15px;
     text-align: center;
-    
-    margin: 20px auto;
-    max-width: 90%;
-    border-radius: 5px;
+    max-width: 100%;
+    border-radius: 8px;
 }
 #find-your-dent-guy {
     padding-bottom: 50px;
