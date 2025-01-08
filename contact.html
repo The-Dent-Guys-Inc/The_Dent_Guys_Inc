@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
     </head>
     <body>
         <header id="pages-header">
@@ -36,49 +37,67 @@
                     <li><a href="photos.html">Photos</a></li>
                     <li><a href="contact.html" class="contact-button">Contact</a></li>
                 </ul>
+                <!-- Hamburger Icon -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </header>
 
-        <div id="main">
-        <section >
-            <h2 class="pages-header">Contact</h2>
-        </section>
-        
-        <section class="contact-container">
-            <div class="contact">
-                <h3>Hours</h3>
-                    <p>Monday - Friday<br>9am - 5pm</p>
-                <h3>Shop Location</h3>
-                    <p>1900 Eutaw Ave, Fallston, MD 21047</p>
-                <h3>Phone</h3>
-                    <p>Jeremy Cox - Manager<br>757-527-9986</p>
-                <h3>E-mail</h3>
-                    <a href="mailto:info@thedentguysinc.com">info@TheDentGuysInc.com</a>
-            </div>
-            <div class="map">
-                <h3>Serving</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197067.22903757272!2d-76.46741474572218!3d39.48795260480733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7e744bed937f9%3A0xfef39fff34b98180!2sHarford%20County%2C%20MD!5e0!3m2!1sen!2sus!4v1709866606155!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p>Harford County and surrounding areas</p>
-             </div>
-        </section>
-        <section id="find-your-dent-guy">
-            <h2>Find Your Dent Guy</h2>
-                <P>The Dent Guys offers free estimates from our shop location, at your home, or over the phone. Find the Dent Guy that best fits you: </P>
-        </section>
-        <div class="dent-guys-container">
-            <section class="shop">
-                <h3 >Shop Location:</h3>
-                <p>Alex Lang - Master Dent Specialist<br>410-808-3301</p>
-            </section>
-            <section class="mobile">
-                <h3 >Mobile Repairs:</h3>
-                <p>Derek Schimanke - Master Dent Specialist<br>443-528-4469</p>
-                <P>Serving: Harford County</P>
-                <br>
-                <p>Matt Critchfield - Master Dent Specialist<br>443-823-9996</p>
-                <p>Serving: Towson and Southern Harford County</p>
-            </section>
+        <!-- Mobile Navigation Menu (Initially hidden) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-Us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a class="contact-button" href="contact.html">Contact</a></li>
+            </ul>
         </div>
+
+        <div id="main">
+            <section >
+                <h2 class="pages-header">Contact</h2>
+            </section>
+            <div class="content">
+                <section class="contact-container">
+                    <div class="contact">
+                        <h3>Hours</h3>
+                            <p>Monday - Friday<br>9am - 5pm</p>
+                        <h3>Shop Location</h3>
+                            <p>1900 Eutaw Ave, Fallston, MD 21047</p>
+                        <h3>Phone</h3>
+                            <p>Jeremy Cox - Manager<br>757-527-9986</p>
+                        <h3>E-mail</h3>
+                            <a href="mailto:info@thedentguysinc.com">info@TheDentGuysInc.com</a>
+                    </div>
+                    <div class="map">
+                        <h3>Serving</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197067.22903757272!2d-76.46741474572218!3d39.48795260480733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7e744bed937f9%3A0xfef39fff34b98180!2sHarford%20County%2C%20MD!5e0!3m2!1sen!2sus!4v1709866606155!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Harford County and surrounding areas</p>
+                    </div>
+                </section>
+                <section id="find-your-dent-guy">
+                    <h2>Find Your Dent Guy</h2>
+                        <P>The Dent Guys offers free estimates from our shop location, at your home, or over the phone. Find the Dent Guy that best fits you: </P>
+                </section>
+                <div class="dent-guys-container">
+                    <section class="shop">
+                        <h3 >Shop Location:</h3>
+                        <p><strong>Alex Lang</strong> - Master Dent Specialist<br>410-808-3301</p>
+                    </section>
+                    <section class="mobile">
+                        <h3 >Mobile Repairs:</h3>
+                        <p><strong>Derek Schimanke</strong> - Master Dent Specialist<br>443-528-4469</p>
+                        <P>Serving: Harford County</P>
+                        <br>
+                        <p><strong>Matt Critchfield</strong> - Master Dent Specialist<br>443-823-9996</p>
+                        <p>Serving: Towson and Southern Harford County</p>
+                    </section>
+                </div>
+            </div>
       
         <footer id="footer">
             <div class="footer-left">

@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <script src="main.js"></script>
     </head>
     <body>
         <header>
@@ -36,8 +37,25 @@
                     <li><a href="photos.html">Photos</a></li>
                     <li><a href="contact.html" class="contact-button">Contact</a></li>
                 </ul>
+                <!-- Hamburger Icon -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </header>
+
+        <!-- Mobile Navigation Menu (Initially hidden) -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About-Us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a class="contact-button" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
         <div id="main">
             <section>
@@ -55,14 +73,11 @@
             </div>
 
             <div class="content">
-                <div class="services-info-container1">
-                    <div class="services-info1">
-                        <p>Hailstorms can leave your vehicle with unsightly dings and dents, but our expert hail damage repair services can restore your car’s appearance quickly and affordably. We specialize in repairing all levels of hail damage with precision and care, using advanced techniques to preserve your vehicle's original paint and structure. Our skilled technicians work diligently to ensure your car looks as good as new, without the hassle of lengthy body shop repairs. Whether it's a few dents or widespread damage, trust us to provide reliable, cost-effective solutions that get you back on the road with a vehicle that shines like new.</p>
-                    </div>
-        
+                <div>
+                    <p>Hailstorms can leave your vehicle with unsightly dings and dents, but our expert hail damage repair services can restore your car’s appearance quickly and affordably. We specialize in repairing all levels of hail damage with precision and care, using advanced techniques to preserve your vehicle's original paint and structure. Our skilled technicians work diligently to ensure your car looks as good as new, without the hassle of lengthy body shop repairs. Whether it's a few dents or widespread damage, trust us to provide reliable, cost-effective solutions that get you back on the road with a vehicle that shines like new.</p>      
                 </div>
-                <section class="services-info-container2">
-                    <div class="services-info2">
+                <div class="repair-services-info-container">
+                    <div>
                         <h3>Free Estimate</h3>
                             <p>Hail damage requires an in-person estimate. Call your local Dent Guy to schedule an appointment for a free estimate.</p>
                         <h3>Mobile Repair</h3>
@@ -73,7 +88,7 @@
                     <div class="dent-repair-img">
                         <img src="images/hail-damage-car.jpeg" alt="Car with ding"/>
                     </div>
-                </section>
+                </div>
             </div>
 
             <footer id="footer">
